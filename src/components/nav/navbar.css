@@ -1,0 +1,27 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    padding: 10px 0; 
+    z-index: 1000; 
+  }
+  
+  .navbar__item {
+    display: inline-block;
+    margin-right: 20px; /* Adjust margin between navbar items as needed */
+  }
+  
+  .navbar__item:last-child {
+    margin-right: 0; /* Remove margin from last navbar item */
+  }
+  
+  .navbar__item a {
+    text-decoration: none;
+    color: #000000; /* Adjust text color as needed */
+  }
+  
+  .navbar__item a:hover {
+    color: #333333; /* Adjust text color on hover as needed */
+  }

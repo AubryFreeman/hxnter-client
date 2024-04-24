@@ -3,6 +3,8 @@ import { Authorized } from "./Authorized.jsx";
 import { useEffect, useState } from "react";
 import { Login } from "../pages/login.jsx";
 import Home from "../pages/home.jsx";
+import Hunt from "../pages/hunt.jsx";
+import Profile from "../pages/profile.jsx";
 
 
 export const ApplicationViews = () => {
@@ -17,10 +19,11 @@ export const ApplicationViews = () => {
 
   return (
     <Routes>
-      <Route path="/login/" element={<Login />} />
+      <Route path="/login" element={<Login />} />
       <Route element={<Authorized user={user}/>}>
-        <Route path="/"></Route>
-        <Route path="/home" element={<Home />}></Route>
+        <Route path="/home" element={<Home />} />
+        <Route path="/hunt" element={<Hunt />} />
+        <Route path="/profile" element={<Profile />} />
       </Route>
     </Routes>
   );
