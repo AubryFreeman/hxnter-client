@@ -5,6 +5,8 @@ import { Login } from "../pages/login.jsx";
 import Home from "../pages/home.jsx";
 import Hunt from "../pages/hunt.jsx";
 import Profile from "../pages/profile.jsx";
+import CreateMission from "../pages/createHunt.jsx";
+import HuntDetails from "../pages/huntDetails.jsx";
 
 
 export const ApplicationViews = () => {
@@ -23,6 +25,8 @@ export const ApplicationViews = () => {
       <Route element={<Authorized user={user}/>}>
         <Route path="/home" element={<Home />} />
         <Route path="/hunt" element={<Hunt />} />
+        <Route path="/huntDetails/:huntId" element={<HuntDetails />} />
+        <Route path="/create" element={<CreateMission />} />
         <Route path="/profile" element={<Profile />} />
       </Route>
     </Routes>
