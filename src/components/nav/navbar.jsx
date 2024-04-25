@@ -9,7 +9,10 @@ export const NavBar = () => {
                 <NavLink to={"/home"}>Home</NavLink>
             </li>
             <li className="navbar__item pl-10">
-                <NavLink to={"/hunt"}>Create a Hunt</NavLink>
+                <NavLink to={"/hunt"}>Hunt</NavLink>
+            </li>
+            <li className="navbar__item pl-10">
+                <NavLink to={"/create"}>Create a Hunt</NavLink>
             </li>
             <li className="navbar__item pl-10">
                 <NavLink to={"/profile"}>Profile</NavLink>
