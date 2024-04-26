@@ -7,6 +7,7 @@ import Hunt from "../pages/hunt.jsx";
 import Profile from "../pages/profile.jsx";
 import CreateMission from "../pages/createHunt.jsx";
 import HuntDetails from "../pages/huntDetails.jsx";
+import EditHunt from "../pages/editHunt.jsx";
 
 
 export const ApplicationViews = () => {
@@ -26,6 +27,7 @@ export const ApplicationViews = () => {
         <Route path="/home" element={<Home />} />
         <Route path="/hunt" element={<Hunt />} />
         <Route path="/huntDetails/:huntId" element={<HuntDetails />} />
+        <Route path="/editHunt/:huntId" element={<EditHunt />} />
         <Route path="/create" element={<CreateMission />} />
         <Route path="/profile" element={<Profile />} />
       </Route>
