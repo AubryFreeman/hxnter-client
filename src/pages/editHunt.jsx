@@ -9,8 +9,8 @@ const EditHunt = () => {
         hunter_name: '',
         title: '',
         description: '',
-        wanted_id: '',
-        type_id: '',
+        wanted: '',
+        type: '', // Change to type
     });
     const [types, setTypes] = useState([]);
     const [error, setError] = useState(null);
@@ -25,8 +25,8 @@ const EditHunt = () => {
                     hunter_name: data.hunter_name,
                     title: data.title,
                     description: data.description,
-                    wanted_id: data.wanted_id,
-                    type_id: data.type.id,
+                    wanted: data.wanted_id,
+                    type: data.type.id.toString(), // Convert type ID to string
                 });
             } catch (error) {
                 setError('Error fetching hunt details');
@@ -70,7 +70,7 @@ const EditHunt = () => {
                 <div>
                     <label>Hunter:</label>
                     <span>{huntData.hunter_name}</span>
-                    </div>
+                </div>
                 <div>
                     <label htmlFor="title">Title:</label>
                     <input
@@ -108,8 +108,8 @@ const EditHunt = () => {
                                 type="radio"
                                 id={typeItem.id}
                                 name="type"
-                                value={typeItem.id}
-                                checked={huntData.type_id === typeItem.id}
+                                value={typeItem.id.toString()} // Convert type ID to string
+                                checked={huntData.type === typeItem.id.toString()} // Check against string value
                                 onChange={handleChange}
                             />
                             <label htmlFor={typeItem.id}>{typeItem.name}</label>
@@ -123,3 +123,4 @@ const EditHunt = () => {
 };
 
 export default EditHunt;
+
