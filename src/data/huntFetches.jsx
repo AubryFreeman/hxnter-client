@@ -125,3 +125,13 @@ export const createHunt = async (obj, user_token) => {
       throw error;
     }
   };
+
+  export const getWantedPersons = async (token) => {
+    const response = await fetch('http://localhost:8000/wanted', {
+      headers: {
+        'Authorization': `Token ${token}`
+      }
+    });
+    const data = await response.json();
+    return data;
+  }

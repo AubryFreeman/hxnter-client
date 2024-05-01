@@ -62,7 +62,7 @@ const HuntDetails = () => {
                 <h2>{hunt.title}</h2>
                 <p>{hunt.description}</p>
                 <p>Hunter: {hunt.hunter_name}</p>
-                <p>Wanted: {hunt.wanted_id}</p>
+                <p>Wanted: {hunt.wanted.full_name}</p>
                 <p>Type: {hunt.type.name}</p>
             </div>
             {canEditOrDelete && (
