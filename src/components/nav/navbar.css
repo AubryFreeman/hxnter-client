@@ -3,25 +3,108 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: transparent;
-    padding: 10px 0; 
+    background-color: #333;
+    color: #fff;
     z-index: 1000; 
   }
   
-  .navbar__item {
-    display: inline-block;
-    margin-right: 20px; /* Adjust margin between navbar items as needed */
+  .navbar__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
   }
   
-  .navbar__item:last-child {
-    margin-right: 0; /* Remove margin from last navbar item */
+  .navbar__toggle {
+    display: none; 
+    cursor: pointer;
+  }
+  
+  .navbar__menu {
+    position: fixed;
+    top: 0;
+    left: -250px; 
+    width: 250px;
+    height: 100%;
+    background-color: #222;
+    transition: left 0.3s ease;
+  }
+  
+  .navbar__overlay {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999; 
+  }
+  
+  .show {
+    left: 0; 
+    display: block;
+  }
+  
+  .navbar__close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 24px;
+  }
+  
+  .navbar__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 50px 0 0;
+  }
+  
+  .navbar__item {
+    padding: 10px 0;
   }
   
   .navbar__item a {
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
     text-decoration: none;
-    color: #000000; /* Adjust text color as needed */
   }
   
   .navbar__item a:hover {
-    color: #333333; /* Adjust text color on hover as needed */
+    background-color: #555;
   }
+  
+  @media screen and (max-width: 768px) {
+    .navbar__toggle {
+      font-size: 24px;
+      margin-right: 20px;
+    }
+  
+    .navbar__menu {
+      width: 200px;
+    }
+  }
+  
+  .nav-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.nav-btn-line {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: background-color 0.3s; 
+}
+
+.nav-btn:hover .nav-btn-line {
+    background-color: #ccc; 
+}
+
+
+  

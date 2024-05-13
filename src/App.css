@@ -40,3 +40,8 @@
 .read-the-docs {
   color: #888;
 }
+
+.custom-cursor {
+  cursor: url('https://cdn.custom-cursor.com/packs/12/ext/Gun%20Sight.png'), auto;
+}
+
