@@ -32,13 +32,18 @@ export const NavBar = () => {
               </NavLink>
             </li>
             <li className="navbar__item">
-              <NavLink to={"/hunt"} onClick={toggleMenu}>
-                Hunt
+              <NavLink to={"/wanted"} onClick={toggleMenu}>
+                Wanted
               </NavLink>
             </li>
             <li className="navbar__item">
-              <NavLink to={"/create"} onClick={toggleMenu}>
-                Create a Hunt
+              <NavLink to={"/hunt"} onClick={toggleMenu}>
+                Hxnt
+              </NavLink>
+            </li>
+            <li className="navbar__item">
+              <NavLink to={"/connect"} onClick={toggleMenu}>
+                Connect
               </NavLink>
             </li>
             <li className="navbar__item">

@@ -47,6 +47,11 @@ const Hunt = () => {
           ))}
         </ul>
       )}
+      <Link to="/create">
+        <button style={{ position: 'fixed', bottom: '20px', right: '20px' }}>
+          Create Hunt
+        </button>
+      </Link>
     </div>
   );
 };

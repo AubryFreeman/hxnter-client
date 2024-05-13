@@ -8,6 +8,8 @@ import Profile from "../pages/profile.jsx";
 import CreateMission from "../pages/createHunt.jsx";
 import HuntDetails from "../pages/huntDetails.jsx";
 import EditHunt from "../pages/editHunt.jsx";
+import Wanted from "../pages/wanted.jsx";
+import Connect from "../pages/connect.jsx";
 import { Register } from "../pages/register.jsx";
 
 
@@ -27,10 +29,12 @@ export const ApplicationViews = () => {
       <Route path="/register" element={<Register />} />
       <Route element={<Authorized user={user}/>}>
         <Route path="/home" element={<Home />} />
+        <Route path="/wanted" element={<Wanted />} />
         <Route path="/hunt" element={<Hunt />} />
+        <Route path="/connect" element={<Connect />} />
+        <Route path="/create" element={<CreateMission />} />
         <Route path="/huntDetails/:huntId" element={<HuntDetails />} />
         <Route path="/editHunt/:huntId" element={<EditHunt />} />
-        <Route path="/create" element={<CreateMission />} />
         <Route path="/profile" element={<Profile />} />
       </Route>
     </Routes>
